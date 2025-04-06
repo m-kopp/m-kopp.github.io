@@ -11,6 +11,8 @@ menu:
 ---
 
 
-Du willst uns buchen. Tel oder E-Mail an....
+Du willst uns buchen? Kontaktiere uns Tel oder E-Mail an....
+
+
 
 
