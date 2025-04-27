@@ -1,15 +1,28 @@
 {{ define "main" }}
 
 <div class="tour-dates">
-    {{ $upcoming := where (where .Pages "Kind" "page") "Params.date" "ge" now }}
-    {{ $past := where (where .Pages "Kind" "page") "Params.date" "lt" now }}
+    <!-- Aktuelles Datum im Format YYYY-MM-DD -->
+    {{ $currentDate := now.Format "2006-01-02" }}
+    
+    <!-- Explizite Filterung nach dem date-Parameter -->
+    {{ $upcoming := slice }}
+    {{ $past := slice }}
+    
+    {{ range where .Pages "Kind" "page" }}
+        {{ $showDate := .Date.Format "2006-01-02" }}
+        {{ if ge $showDate $currentDate }}
+            {{ $upcoming = $upcoming | append . }}
+        {{ else }}
+            {{ $past = $past | append . }} 
+        {{ end }}
+    {{ end }}
     
     <h2>Kommende Auftritte</h2>
     {{- if $upcoming }}
     <div class="upcoming-shows">
         {{- range $upcoming }}
         <div class="show-item">
-            <div class="show-date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format $.Site.Params.dateFormat }}{{ end }}</div>
+            <div class="show-date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format "02.01.2006" }}{{ end }}</div>
             <div class="show-info">
                 <h3>{{ .Title }}</h3>
                 <p class="venue">{{ with .Params.venue }}{{ . }}{{ end }}</p>
@@ -31,9 +44,9 @@
     {{ if $past }}
     <h2>Vergangene Auftritte</h2>
     <div class="past-shows">
-        {{- range $past.Reverse }}
+        {{- range $past }}
         <div class="show-item past">
-            <div class="show-date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format $.Site.Params.dateFormat }}{{ end }}</div>
+            <div class="show-date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format "02.01.2006" }}{{ end }}</div>
             <div class="show-info">
                 <h3>{{ .Title }}</h3>
                 <p class="venue">{{ with .Params.venue }}{{ . }}{{ end }}</p>
