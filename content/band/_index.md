@@ -11,18 +11,13 @@ Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik mac
 
 ## Unsere Mitglieder
 
-"Petzi" - Gesang
-
-"Chrischie" - Gesang
-
-"Crepper" - Gitarre
-
-"Robby" - Keys und Gittarre 
-
-"D-wie-Daumen" - Bass
-
-"UT"- Drums & Web
++ "Petzi" - Gesang
++ "Chrischie" - Gesang
++ "Crepper" - Gitarre
++ "Robby" - Keys und Gittarre 
++ "D" - Bass
++ "UT"- Drums & Web
 
 ## Band Geschichte
 
-Mehr über unsere Geschichte und Werdegang erfahren Sie auf unserer [Geschichte-Seite](/band/geschichte/).
+Mehr über unsere Geschichte uvon M-Kopp erfährst du hier [Geschichte-Seite](/band/geschichte/).

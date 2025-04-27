@@ -1,6 +1,6 @@
 ---
 title: "Startseite"
-date: 2025-04-27
+date: 2022-04-27
 headerImage: "/images/band-header-home.jpg"
 ---
 

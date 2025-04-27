@@ -1,19 +1,32 @@
 {{ define "main" }}
 
+
 <div class="tour-dates">
-    <!-- Aktuelles Datum im Format YYYY-MM-DD -->
-    {{ $currentDate := now.Format "2006-01-02" }}
+    {{ $currentDate := now.Format "02.01.2006" }}
     
-    <!-- Explizite Filterung nach dem date-Parameter -->
     {{ $upcoming := slice }}
     {{ $past := slice }}
     
-    {{ range where .Pages "Kind" "page" }}
-        {{ $showDate := .Date.Format "2006-01-02" }}
-        {{ if ge $showDate $currentDate }}
-            {{ $upcoming = $upcoming | append . }}
-        {{ else }}
-            {{ $past = $past | append . }} 
+    {{ range .Pages }}
+        {{ $eventDate := .Params.eventDate | default (.Date.Format "02.01.2006") }}
+        {{ $dateParts := split $eventDate "." }}
+        {{ if eq (len $dateParts) 3 }}
+            {{ $day := index $dateParts 0 }}
+            {{ $month := index $dateParts 1 }}
+            {{ $year := index $dateParts 2 }}
+            {{ $compareDate := printf "%s-%s-%s" $year $month $day }}
+            
+            {{ $nowParts := split $currentDate "." }}
+            {{ $nowDay := index $nowParts 0 }}
+            {{ $nowMonth := index $nowParts 1 }}
+            {{ $nowYear := index $nowParts 2 }}
+            {{ $nowCompare := printf "%s-%s-%s" $nowYear $nowMonth $nowDay }}
+            
+            {{ if ge $compareDate $nowCompare }}
+                {{ $upcoming = $upcoming | append . }}
+            {{ else }}
+                {{ $past = $past | append . }}
+            {{ end }}
         {{ end }}
     {{ end }}
     

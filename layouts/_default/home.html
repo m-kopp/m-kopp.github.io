@@ -19,10 +19,33 @@
     
     <div class="upcoming-shows">
         <h2>Nächste Auftritte</h2>
-        {{ $upcoming := where (where .Site.RegularPages "Section" "tour") "Params.date" "ge" now }}
+        {{ $currentDate := now.Format "02.01.2006" }}
+        {{ $upcoming := slice }}
+        {{ range where .Site.RegularPages "Section" "tour" }}
+            {{ $eventDate := .Params.eventDate | default (.Date.Format "02.01.2006") }}
+            {{ $dateParts := split $eventDate "." }}
+            {{ if eq (len $dateParts) 3 }}
+                {{ $day := index $dateParts 0 }}
+                {{ $month := index $dateParts 1 }}
+                {{ $year := index $dateParts 2 }}
+                {{ $compareDate := printf "%s-%s-%s" $year $month $day }}
+                
+                {{ $nowParts := split $currentDate "." }}
+                {{ $nowDay := index $nowParts 0 }}
+                {{ $nowMonth := index $nowParts 1 }}
+                {{ $nowYear := index $nowParts 2 }}
+                {{ $nowCompare := printf "%s-%s-%s" $nowYear $nowMonth $nowDay }}
+                
+                {{ if ge $compareDate $nowCompare }}
+                    {{ $upcoming = $upcoming | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        
         {{- range first 3 $upcoming }}
         <div class="show-item">
             <h3>{{ .Title }}</h3>
+            <br>
             <p class="date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format $.Site.Params.dateFormat }}{{ end }}</p>
             <p>{{ with .Params.venue }}{{ . }}{{ end }}</p>
             <a href="{{ .Permalink }}" class="details">Details</a>
