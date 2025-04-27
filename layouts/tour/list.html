@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+
 <div class="tour-dates">
     {{ $upcoming := where (where .Pages "Kind" "page") "Params.date" "ge" now }}
     {{ $past := where (where .Pages "Kind" "page") "Params.date" "lt" now }}

@@ -5,8 +5,6 @@ description: "Impressum und rechtliche Informationen"
 headerImage: "/images/band-header-impressum.jpg"
 ---
 
-# Impressum
-
 ## Angaben gemäß § 5 TMG
 
 Meine Band GbR  

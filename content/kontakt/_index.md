@@ -5,8 +5,6 @@ description: "Kontaktiere unsere Band"
 headerImage: "/images/band-header-kontakt.jpg"
 ---
 
-# Kontakt
-
 Sie möchten uns für ein Konzert buchen, haben Fragen oder wollen einfach nur Kontakt aufnehmen? Hier sind unsere Kontaktdaten.
 
 ## Booking & Management
