@@ -13,11 +13,11 @@
             <div class="logo">
                 <a href="/">{{ .Site.Title }}</a>
             </div>
-            <nav>
+            <nav class="cool-menu">
                 {{ $currentPage := . }}
                 <ul>
                     {{ range .Site.Menus.main }}
-                    <li><a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a></li>
+                    <li><a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}<span></span></a></li>
                     {{ end }}
                 </ul>
             </nav>
