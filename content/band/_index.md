@@ -5,24 +5,22 @@ description: "Über unsere Band, Mitglieder und Geschichte"
 headerImage: "/images/band-header-band.jpg"
 ---
 
-# Über uns
+# Die Koppe
 
-Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik macht. Unsere Einflüsse reichen von Rock über Jazz bis hin zu modernen Klängen.
+Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik macht. Unsere Einflüsse reichen von Rock über garantiert kein Jazz bis hin zu modernen Klängen.
 
 ## Unsere Mitglieder
 
-### Max Mustermann - Gesang, Gitarre
-Max ist seit der Gründung dabei und schreibt die meisten unserer Songs. Seine einzigartige Stimme ist das Herzstück unserer Musik.
+"Petzi" - Gesang
 
-### Anna Schmidt - Bass, Backing Vocals
-Anna bringt mit ihrem Bass den Groove in unsere Songs und sorgt mit ihren harmonischen Backing Vocals für ein volleres Klangbild.
+"Chrischie" - Gesang
 
-### Tom Müller - Schlagzeug
-Toms kraftvolles und präzises Schlagzeugspiel bildet das Rückgrat unserer Musik.
+"Crepper" - Gitarre
 
-### Lisa Wagner - Keyboard, Synthesizer
-Lisa erweitert unseren Sound mit ihrem Keyboard und experimentellen Synthesizer-Klängen.
+"Robby" - Keys und Gittarre 
 
-## Unsere Geschichte
+"D-wie-Daumen" - Bass
 
-Unsere Band wurde im Jahr 2015 gegründet, als wir uns bei einem lokalen Musikwettbewerb kennenlernten. Seitdem haben wir zahlreiche Konzerte gespielt und mehrere Alben veröffentlicht.
+"UT"- Drums & Web
+
+[Geschichte-Seite](/band/geschichte/).
