@@ -23,4 +23,6 @@ Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik mac
 
 "UT"- Drums & Web
 
-[Geschichte-Seite](/band/geschichte/).
+## Band Geschichte
+
+Mehr über unsere Geschichte und Werdegang erfahren Sie auf unserer [Geschichte-Seite](/band/geschichte/).

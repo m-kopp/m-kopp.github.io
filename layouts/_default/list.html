@@ -3,15 +3,5 @@
     <div class="content">
         {{ .Content }}
     </div>
-    {{ if .Pages }}
-    <div class="page-list">
-        {{ range .Pages }}
-        <div class="page-item">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <p>{{ .Summary }}</p>
-        </div>
-        {{ end }}
-    </div>
-    {{ end }}
 </article>
 {{ end }}
