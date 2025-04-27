@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<section class="content">
+    {{ .Content }}
+</section>
+
+<section class="featured-content">
+    <div class="latest-news">
+        <h2>Neuigkeiten</h2>
+        {{- range first 3 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        <div class="news-item">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p class="date">{{ .Date.Format .Site.Params.dateFormat }}</p>
+            <p>{{ .Summary }}</p>
+            <a href="{{ .Permalink }}" class="read-more">Weiterlesen</a>
+        </div>
+        {{- end }}
+    </div>
+    
+    <div class="upcoming-shows">
+        <h2>Nächste Auftritte</h2>
+        {{ $upcoming := where (where .Site.RegularPages "Section" "tour") "Params.date" "ge" now }}
+        {{- range first 3 $upcoming }}
+        <div class="show-item">
+            <h3>{{ .Title }}</h3>
+            <p class="date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format $.Site.Params.dateFormat }}{{ end }}</p>
+            <p>{{ with .Params.venue }}{{ . }}{{ end }}</p>
+            <a href="{{ .Permalink }}" class="details">Details</a>
+        </div>
+        {{- else }}
+        <p>Derzeit keine Auftritte geplant. Schaut bald wieder vorbei!</p>
+        {{- end }}
+    </div>
+</section>
+{{ end }}

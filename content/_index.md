@@ -1,13 +1,9 @@
 ---
-title: 'M#Kopp - Schoppenrock'
-description: "Schoppenrock auf dem Herzen von Hessen"
-# 1. To ensure Netlify triggers a build on our exampleSite instance, we need to change a file in the exampleSite directory.
-theme_version: '2.8.2'
-cascade:
-  featured_image: '/images/live.webp'
+title: "Startseite"
+date: 2025-04-27
+headerImage: "/images/unsplash/austin-neill-hgO1wFPXl3I-unsplash.jpg"
 ---
 
-Top-News: Wie sind im Studio und machen Aufnahmen für euch !!!
+# Willkommen bei unserer Band
 
-
-
+Hier findet ihr alle aktuellen Informationen, Tourdaten und mehr rund um unsere Musik.

@@ -1,0 +1,47 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="tour-dates">
+    {{ $upcoming := where (where .Pages "Kind" "page") "Params.date" "ge" now }}
+    {{ $past := where (where .Pages "Kind" "page") "Params.date" "lt" now }}
+    
+    <h2>Kommende Auftritte</h2>
+    {{- if $upcoming }}
+    <div class="upcoming-shows">
+        {{- range $upcoming }}
+        <div class="show-item">
+            <div class="show-date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format $.Site.Params.dateFormat }}{{ end }}</div>
+            <div class="show-info">
+                <h3>{{ .Title }}</h3>
+                <p class="venue">{{ with .Params.venue }}{{ . }}{{ end }}</p>
+                <p class="address">{{ with .Params.address }}{{ . }}{{ end }}</p>
+                {{ with .Content }}
+                <div class="show-details">{{ . }}</div>
+                {{ end }}
+                {{ with .Params.ticketLink }}
+                <a href="{{ . }}" class="ticket-button" target="_blank">Tickets kaufen</a>
+                {{ end }}
+            </div>
+        </div>
+        {{- end }}
+    </div>
+    {{- else }}
+    <p>Derzeit keine Auftritte geplant. Schaut bald wieder vorbei!</p>
+    {{- end }}
+
+    {{ if $past }}
+    <h2>Vergangene Auftritte</h2>
+    <div class="past-shows">
+        {{- range $past.Reverse }}
+        <div class="show-item past">
+            <div class="show-date">{{ with .Params.eventDate }}{{ . }}{{ else }}{{ .Date.Format $.Site.Params.dateFormat }}{{ end }}</div>
+            <div class="show-info">
+                <h3>{{ .Title }}</h3>
+                <p class="venue">{{ with .Params.venue }}{{ . }}{{ end }}</p>
+                <p class="address">{{ with .Params.address }}{{ . }}{{ end }}</p>
+            </div>
+        </div>
+        {{- end }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}
