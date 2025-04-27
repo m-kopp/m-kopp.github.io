@@ -41,5 +41,27 @@
             <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <div id="visitor-counter">
+        <div class="counter-label">Besucher:</div>
+        <div id="counter-value" class="counter-display">0</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Zufällige Startzahl zwischen 125 und 3210 generieren
+            let counter = Math.floor(Math.random() * (3210 - 125 + 1)) + 125;
+            const counterDisplay = document.getElementById('counter-value');
+            
+            // Zähler initial setzen
+            counterDisplay.textContent = counter;
+            
+            // Zähler jede Sekunde erhöhen
+            setInterval(function() {
+                counter++;
+                counterDisplay.textContent = counter;
+            }, 13000);
+        });
+    </script>
 </body>
 </html>
