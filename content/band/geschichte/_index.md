@@ -5,7 +5,8 @@ description: "Die Geschichte unserer Band"
 headerImage: "/images/band-header-band.jpg"
 ---
 
-Es fing alles damit an, das ein paar Jungs aus der Realschule im Buchenbusch in Neu-Isenburg bei einem Schulfest die Band Jesus on the Rocks (damals mit Stefan Nachtsheim, Heido Heidenreich, Manfred “Barny Baller“ Faust und Mui Müller) sahen und hörten.
+# Es fing alles damit an ...
+... das ein paar Jungs aus der Realschule im Buchenbusch in Neu-Isenburg bei einem Schulfest die Band Jesus on the Rocks (damals mit Stefan Nachtsheim, Heido Heidenreich, Manfred “Barny Baller“ Faust und Mui Müller) sahen und hörten.
 
 Da haben wir festgestellt das die Musik nicht nur geil ist, sondern das auch die Mädels auf die Musiker abfuhren. Also wurden billige Instrumente gekauft und einen 10 Watt Teisco Verstärker über den alle 3 Gitarren liefen. Nicht das wir sonderlich begabt waren, haben wir trotzdem bald darauf die Gruppe Kotzbrocken gegründet.
 
