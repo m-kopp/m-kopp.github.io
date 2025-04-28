@@ -24,40 +24,22 @@
         </div>
     </header>
 
-    <div class="header-image">
-        {{ $fallbackImage := resources.Get "images/band-header.jpg" }}
-        {{ $headerImage := $fallbackImage }}
-        
-        {{ if .Params.headerImage }}
-            {{ $imagePath := .Params.headerImage }}
-            {{ $imageName := path.Base $imagePath }}
-            {{ if (fileExists (printf "assets/images/%s" $imageName)) }}
-                {{ $headerImage = resources.Get (printf "images/%s" $imageName) }}
-            {{ end }}
+    {{ $fallbackImage := resources.Get "images/band-header.jpg" }}
+    {{ $headerImage := $fallbackImage }}
+    
+    {{ if .Params.headerImage }}
+        {{ $headerFilename := path.Base .Params.headerImage }}
+        {{ $possibleImage := resources.Get (printf "images/%s" $headerFilename) }}
+        {{ if $possibleImage }}
+            {{ $headerImage = $possibleImage }}
         {{ end }}
+    {{ end }}
+    
+    {{ $smallImage := $headerImage.Resize "800x" }}
+    {{ $mediumImage := $headerImage.Resize "1200x" }}
+    {{ $largeImage := $headerImage.Resize "1600x" }}
 
-        {{ with $headerImage }}
-            {{ $small := .Resize "800x" }}
-            {{ $medium := .Resize "1200x" }}
-            {{ $large := .Resize "1600x" }}
-            
-            <style>
-                .header-image {
-                    background-image: url('{{ $small.RelPermalink }}');
-                }
-                @media (min-width: 768px) {
-                    .header-image {
-                        background-image: url('{{ $medium.RelPermalink }}');
-                    }
-                }
-                @media (min-width: 1200px) {
-                    .header-image {
-                        background-image: url('{{ $large.RelPermalink }}');
-                    }
-                }
-            </style>
-        {{ end }}
-        
+    <div class="header-image" style="background-image: url('{{ $mediumImage.RelPermalink }}');">        
         <div class="header-overlay">
             <h1>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}</h1>
         </div>
