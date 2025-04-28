@@ -24,7 +24,40 @@
         </div>
     </header>
 
-    <div class="header-image" {{ with .Params.headerImage }}style="background-image: url('{{ . }}');"{{ end }}>
+    <div class="header-image">
+        {{ $fallbackImage := resources.Get "images/band-header.jpg" }}
+        {{ $headerImage := $fallbackImage }}
+        
+        {{ if .Params.headerImage }}
+            {{ $imagePath := .Params.headerImage }}
+            {{ $imageName := path.Base $imagePath }}
+            {{ if (fileExists (printf "assets/images/%s" $imageName)) }}
+                {{ $headerImage = resources.Get (printf "images/%s" $imageName) }}
+            {{ end }}
+        {{ end }}
+
+        {{ with $headerImage }}
+            {{ $small := .Resize "800x" }}
+            {{ $medium := .Resize "1200x" }}
+            {{ $large := .Resize "1600x" }}
+            
+            <style>
+                .header-image {
+                    background-image: url('{{ $small.RelPermalink }}');
+                }
+                @media (min-width: 768px) {
+                    .header-image {
+                        background-image: url('{{ $medium.RelPermalink }}');
+                    }
+                }
+                @media (min-width: 1200px) {
+                    .header-image {
+                        background-image: url('{{ $large.RelPermalink }}');
+                    }
+                }
+            </style>
+        {{ end }}
+        
         <div class="header-overlay">
             <h1>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}</h1>
         </div>
@@ -50,9 +83,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let counter;
-            let waitingTime = 1000; // Zeit in Millisekunden
-            // waittime random between 20 and 130 seconds
-            waitingTime = Math.floor(Math.random() * (130 - 20 + 1)) + 20;
             const counterDisplay = document.getElementById('counter-value');
             
             // Prüfe, ob bereits ein Zähler im localStorage existiert
@@ -75,7 +105,7 @@
                 counterDisplay.textContent = counter;
                 // Aktualisiere den Wert im localStorage
                 localStorage.setItem('visitorCounter', counter);
-            }, waitingTime * 1000);
+            }, 1000);
         });
     </script>
 </body>

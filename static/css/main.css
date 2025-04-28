@@ -56,6 +56,27 @@ body {
   margin: 0;
 }
 
+/* Responsive Header-Bilder */
+@media (max-width: 768px) {
+  .header-image {
+    height: 150px; /* Kleinere Höhe auf mobilen Geräten */
+  }
+  
+  .header-overlay h1 {
+    font-size: 1.8rem; /* Kleinere Überschrift auf mobilen Geräten */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-image {
+    height: 120px; /* Noch kleinere Höhe auf sehr kleinen Geräten */
+  }
+  
+  .header-overlay h1 {
+    font-size: 1.5rem; /* Noch kleinere Überschrift auf sehr kleinen Geräten */
+  }
+}
+
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -372,11 +393,22 @@ footer p {
   
   nav ul {
     margin-top: 20px;
+    justify-content: center; /* Zentriere Menü auf mobilen Geräten */
+    flex-wrap: wrap; /* Erlaube Umbruch bei vielen Menüpunkten */
   }
   
   nav ul li {
-    margin-left: 15px;
+    margin: 0 10px;
     font-size: 0.9rem;
+  }
+  
+  .cool-menu ul li {
+    margin: 0 10px 5px;
+  }
+  
+  .cool-menu ul li a {
+    font-size: 0.9rem;
+    padding: 3px 0;
   }
   
   .hero h1 {
@@ -389,6 +421,74 @@ footer p {
   
   .show-date {
     text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  /* Homeseite auf mobil anpassen */
+  .home-show-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .show-date-large {
+    margin-bottom: 15px;
+  }
+  
+  /* Abstand für mobile Ansicht verkleinern */
+  main {
+    padding: 30px 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+    margin-top: 30px;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 20px;
+  }
+  
+  nav ul li {
+    margin: 0 8px;
+    font-size: 0.8rem;
+  }
+  
+  .cool-menu ul {
+    flex-direction: row; /* Gewährleiste horizontale Anordnung */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .cool-menu ul li {
+    margin: 0 7px 5px;
+  }
+  
+  .cool-menu ul li a {
+    font-size: 0.85rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .home-show-card {
+    padding: 15px;
+  }
+  
+  .venue-address {
     margin-bottom: 10px;
   }
 }
