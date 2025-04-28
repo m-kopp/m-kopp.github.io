@@ -49,9 +49,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Zufällige Startzahl zwischen 125 und 3210 generieren
-            let counter = Math.floor(Math.random() * (3210 - 125 + 1)) + 125;
+            let counter;
+            let waitingTime = 1000; // Zeit in Millisekunden
+            // waittime random between 20 and 130 seconds
+            waitingTime = Math.floor(Math.random() * (130 - 20 + 1)) + 20;
             const counterDisplay = document.getElementById('counter-value');
+            
+            // Prüfe, ob bereits ein Zähler im localStorage existiert
+            if (localStorage.getItem('visitorCounter')) {
+                // Wenn ja, verwende diesen Wert
+                counter = parseInt(localStorage.getItem('visitorCounter'));
+            } else {
+                // Wenn nicht, generiere eine zufällige Startzahl zwischen 125 und 3210
+                counter = Math.floor(Math.random() * (3210 - 125 + 1)) + 125;
+                // Speichere den Wert im localStorage
+                localStorage.setItem('visitorCounter', counter);
+            }
             
             // Zähler initial setzen
             counterDisplay.textContent = counter;
@@ -60,7 +73,9 @@
             setInterval(function() {
                 counter++;
                 counterDisplay.textContent = counter;
-            }, 13000);
+                // Aktualisiere den Wert im localStorage
+                localStorage.setItem('visitorCounter', counter);
+            }, waitingTime * 1000);
         });
     </script>
 </body>
