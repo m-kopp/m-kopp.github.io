@@ -1,6 +1,6 @@
-baseURL = 'https://m-kopp.de/'
+baseURL = 'https://www.mohrnkopp.de'
 languageCode = 'de-de'
-title = 'M-Kopp'
+title = 'Mohrnkopp'
 
 [menu]
   [[menu.main]]
