@@ -1,5 +1,8 @@
 /* Band-Webseite CSS */
 
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
+
 /* Grundlegende Styles und Reset - Dunkle Version */
 :root {
   /* Hauptfarbschema - Blau- und Rottöne */
@@ -26,7 +29,7 @@
   --light-color: var(--almost-white);
   --dark-color: var(--almost-black);
   
-  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-main: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 * {
