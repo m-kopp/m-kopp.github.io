@@ -20,4 +20,4 @@ Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik mac
 
 ## Band Geschichte
 
-Mehr über unsere Geschichte uvon Mohrnkopp erfährst du hier [Geschichte-Seite](/band/geschichte/).
+Mehr über die Geschichte von Mohrnkopp erfährst du hier [Geschichte-Seite](/band/geschichte/).
