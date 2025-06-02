@@ -2,7 +2,7 @@
 title: "Die Band"
 date: 2025-04-27
 description: "Über unsere Band, Mitglieder und Geschichte"
-headerImage: "/images/band-header-band.jpg"
+headerImage: "/images/band-header-home2.jpg"
 ---
 
 # Die Koppe
