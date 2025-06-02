@@ -2,7 +2,7 @@
 title: "Musik"
 date: 2025-06-02
 description: "Hörproben unserer Musik."
-headerImage: "/images/band-header-home.jpg" # You might want to change this to a more relevant image
+headerImage: "/images/band-header-musik.jpg" # You might want to change this to a more relevant image
 ---
 
 Hier kannst du dir einige unserer Songs eigenen Kompositionen anhören.
