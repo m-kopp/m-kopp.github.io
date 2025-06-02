@@ -11,12 +11,12 @@ Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik mac
 
 ## Unsere Mitglieder
 
-+ "Petzi" - Gesang
-+ "Chrischie" - Gesang
-+ "Crepper" - Gitarre
-+ "Robby" - Keys und Gittarre 
-+ "D" - Bass
-+ "UT"- Drums & Web
++ Bernd „Petzi“ Petzold  			- Gesang
++ Jördis „Nightingale“ Baran		- Gesang
++ Peter „Crepper“ Gerhardt			- Gitarre, Gesang
++ Daniel „Mr. Bum Bum“ Schmidt	    - Bass, Gesang
++ Uwe „The Animal“ Teutscher		- Schlagzeug
++ Robert „Robby“ Chwoika			- Gitarre, Gesang
 
 ## Band Geschichte
 
