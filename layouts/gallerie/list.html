@@ -3,14 +3,21 @@
   <h1>{{ .Title }}</h1>
   <div class="content">
     {{ .Content }}
-    <div class="gallery-grid">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.css">
+    <div class="gallery-grid gallery-lightbox">
       {{ $galerie := readDir "static/images/galerie" }}
       {{ range $galerie }}
         {{ if not .IsDir }}
-          <img src="/images/galerie/{{ .Name }}" alt="Galeriebild {{ .Name }}">
+          <a href="/images/galerie/{{ .Name }}" data-caption="Galeriebild {{ .Name }}">
+            <img src="/images/galerie/{{ .Name }}" alt="Galeriebild {{ .Name }}">
+          </a>
         {{ end }}
       {{ end }}
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run('.gallery-lightbox', { animation: 'fade' });
+    </script>
   </div>
 </article>
 {{ end }}
