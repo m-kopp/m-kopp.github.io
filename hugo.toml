@@ -2,6 +2,11 @@ baseURL = 'https://www.mohrnkopp.de'
 languageCode = 'de-de'
 title = 'Mohrnkopp'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [menu]
   [[menu.main]]
     name = 'Home'
@@ -12,20 +17,24 @@ title = 'Mohrnkopp'
     url = '/band/'
     weight = 2
   [[menu.main]]
+    name = 'Musik'
+    url = '/musik/'
+    weight = 3
+  [[menu.main]]
     name = 'Tour'
     url = '/tour/'
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = 'Kontakt'
     url = '/kontakt/'
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = 'Galerie'
     url = '/gallerie/'
-    weight = 5
+    weight = 6
+
 
 [params]
   description = "Schoppenrock auf dem Herzen von Hessen"
   dateFormat = "02.01.2006"
   mainSections = ['posts']
- 
