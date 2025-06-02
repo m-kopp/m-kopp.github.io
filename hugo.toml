@@ -25,14 +25,13 @@ title = 'Mohrnkopp'
     url = '/tour/'
     weight = 4
   [[menu.main]]
-    name = 'Kontakt'
-    url = '/kontakt/'
-    weight = 5
-  [[menu.main]]
     name = 'Galerie'
     url = '/gallerie/'
+    weight = 5
+  [[menu.main]]
+    name = 'Kontakt'
+    url = '/kontakt/'
     weight = 6
-
 
 [params]
   description = "Schoppenrock auf dem Herzen von Hessen"
