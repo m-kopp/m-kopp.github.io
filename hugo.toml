@@ -20,11 +20,12 @@ title = 'Mohrnkopp'
     url = '/kontakt/'
     weight = 4
   [[menu.main]]
-    name = 'Impressum'
-    url = '/impressum/'
+    name = 'Galerie'
+    url = '/gallerie/'
     weight = 5
 
 [params]
   description = "Schoppenrock auf dem Herzen von Hessen"
   dateFormat = "02.01.2006"
   mainSections = ['posts']
+ 

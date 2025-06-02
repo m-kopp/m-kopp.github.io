@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <div class="content">
+    {{ .Content }}
+    <div class="gallery-grid">
+      {{ $galerie := readDir "static/images/galerie" }}
+      {{ range $galerie }}
+        {{ if not .IsDir }}
+          <img src="/images/galerie/{{ .Name }}" alt="Galeriebild {{ .Name }}">
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</article>
+{{ end }}
