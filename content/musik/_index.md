@@ -5,8 +5,6 @@ description: "Hörproben unserer Musik."
 headerImage: "/images/band-header-musik.jpg" # You might want to change this to a more relevant image
 ---
 
-Hier kannst du dir einige unserer Songs eigenen Kompositionen anhören.
-
 ## MK Songs
 
 <audio controls>
@@ -15,7 +13,9 @@ Hier kannst du dir einige unserer Songs eigenen Kompositionen anhören.
 </audio>
 
 
-## Setliste
+## Setliste 
+
+Eine Auswahl unserer endlosen Liste von Songs
 
 + Doctor Doctor - Schenker/Ufo
 + Bad Case Of Loving Yoe	- Robert Palmer / Billy Gibbons
