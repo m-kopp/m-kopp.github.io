@@ -7,10 +7,13 @@ headerImage: "/images/band-header-musik.jpg" # You might want to change this to 
 
 ## MK Songs
 
-<audio controls>
-  <source src="/mp3/MK-Harmann.mp3" type="audio/mpeg">
-  Dein Browser unterstützt das Audio-Element nicht.
-</audio>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <span>Harmann</span>
+  <audio controls>
+    <source src="/mp3/MK-Harmann.mp3" type="audio/mpeg">
+    Dein Browser unterstützt das Audio-Element nicht.
+  </audio>
+</div>
 
 
 ## Setliste 
