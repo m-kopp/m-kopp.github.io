@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.css">
     <div class="gallery-grid gallery-lightbox">
       {{ $galerie := readDir "static/images/galerie" }}
-      {{ range $galerie }}
+      {{ range sort $galerie "Name" }}
         {{ if not .IsDir }}
           <a href="/images/galerie/{{ .Name }}" data-caption="Galeriebild {{ .Name }}">
             <img src="/images/galerie/{{ .Name }}" alt="Galeriebild {{ .Name }}">
