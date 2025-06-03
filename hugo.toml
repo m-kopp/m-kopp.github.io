@@ -28,7 +28,7 @@ title = 'Mohrnkopp'
     name = 'Galerie'
     url = '/gallerie/'
     weight = 5
-  [[menu.main]]
+  [[menu.main]] 
     name = 'Kontakt'
     url = '/kontakt/'
     weight = 6
