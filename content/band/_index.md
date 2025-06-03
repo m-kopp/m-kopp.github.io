@@ -12,7 +12,7 @@ Wir sind eine leidenschaftliche Band, die seit vielen Jahren gemeinsam Musik mac
 ## Unsere Mitglieder
 
 + Bernd „Petzi“ Petzold - Gesang
-+ Jördis Barran - Gesang
++ Jördis Barran-Remler - Gesang
 + Peter „Crepper“ Gerhardt - Gitarre, Gesang
 + Daniel Schmidt - Bass, Gesang
 + Uwe Teutscher - Schlagzeug
