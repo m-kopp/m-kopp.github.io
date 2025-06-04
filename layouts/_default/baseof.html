@@ -13,9 +13,14 @@
             <div class="logo">
                 <a href="/">{{ .Site.Title }}</a>
             </div>
+            <button id="burger-menu" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="cool-menu">
                 {{ $currentPage := . }}
-                <ul>
+                <ul id="main-nav">
                     {{ range .Site.Menus.main }}
                     <li><a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}<span></span></a></li>
                     {{ end }}
@@ -91,5 +96,6 @@
             }, 100000);
         });
     </script>
+    <script src="/js/burger.js"></script>
 </body>
 </html>
