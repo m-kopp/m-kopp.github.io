@@ -19,7 +19,7 @@ Dies ist die Hugo-basierte Website einer Band mit moderner und poppiger 90s-Opti
 ## Lokale Entwicklung starten
    
    ```zsh
-   hugo serverv -D
+   hugo server -D
    ```
 
 ## Hinweise

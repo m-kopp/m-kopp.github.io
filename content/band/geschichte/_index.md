@@ -45,6 +45,10 @@ Aus beruflichen und freundschaftlichen Gründen und auch der Umstand das es heut
 
 # Links
 
+
+Henni Nachtsheim erzählt über seine Erlebnisse mit uns - https://youtu.be/hI7Xpf3sZqQ?si=bUmWfDMLkpu-Zfod&t=2989
+
+
 https://offenbachrockt.jimdoweb.com/bandlexikon/m/mohrnkopp/
 
 http://www.crepper.de/Mohrnkopp.html
