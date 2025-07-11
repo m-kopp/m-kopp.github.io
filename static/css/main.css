@@ -133,6 +133,9 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .logo a {
@@ -223,9 +226,12 @@ nav ul li a.active {
 /* Simple Responsive Navigation */
 @media (max-width: 768px) {
   header .container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0;
   }
   
   .logo a {
@@ -261,9 +267,10 @@ nav ul li a.active {
   }
   
   .cool-menu ul {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     gap: 5px;
+    flex-wrap: nowrap;
   }
   
   .cool-menu ul li {
@@ -274,6 +281,103 @@ nav ul li a.active {
     font-size: 0.9rem;
     padding: 6px 10px;
     display: block;
+  }
+}
+
+/* Burger-Menü Button */
+#burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1201;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+}
+
+#burger-menu span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--white);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+#burger-menu.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#burger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#burger-menu.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  #burger-menu {
+    display: flex;
+  }
+  
+  nav.cool-menu ul {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--black);
+    flex-direction: column;
+    min-width: 180px;
+    box-shadow: 0 8px 32px 0 #00000099;
+    border-radius: 8px;
+    padding: 18px 0 10px 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 1200;
+    gap: 0;
+  }
+  
+  nav.cool-menu ul.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  
+  nav.cool-menu ul li {
+    margin: 0 0 8px 0;
+    text-align: right;
+    padding: 0 24px;
+  }
+  
+  nav.cool-menu ul li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #burger-menu {
+    width: 34px;
+    height: 34px;
+  }
+  
+  nav.cool-menu ul {
+    top: 60px;
+    right: 10px;
+    min-width: 140px;
+    padding: 10px 0 6px 0;
+  }
+  
+  nav.cool-menu ul li {
+    padding: 0 12px;
   }
 }
 
