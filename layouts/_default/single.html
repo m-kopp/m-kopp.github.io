@@ -1,6 +1,11 @@
 {{ define "main" }}
 <article>
-    <h1>{{ .Title }}</h1>
+    <h1>
+        {{ with .Params.eventDate }}
+        <span class="event-date">{{ . }} - </span>
+        {{ end }}
+        {{ .Title }}
+    </h1>
     <div class="content">
         {{ .Content }}
     </div>
