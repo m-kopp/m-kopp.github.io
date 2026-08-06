@@ -36,7 +36,7 @@ Eine Auswahl unserer endlosen Liste von Songs
 + White Wedding	- Billy Idol
 + Fortunate Son	- John Fogerty / Foo Fighters
 + Old times Rock'n Roll	- Bob Seger
-+ Harmann	- MK
++ Haarmann	- MK
 + Time Warp	- Rocky Horror Picture Show
 + Hold the line	- Toto
 + Well Allright	- Santana
